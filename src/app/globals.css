@@ -18,8 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  padding: 100px;
+  /* padding: 100px; */
 }
+
 
 .administration_con {
   overflow: scroll;
@@ -171,6 +172,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #000000;
 }
 
 .role>span {
