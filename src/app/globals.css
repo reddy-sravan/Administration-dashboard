@@ -18,10 +18,164 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 100px;
+}
+
+.administration_con {
+  overflow: scroll;
+  padding-left: 1000px;
+}
+
+.parent_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.parent_container::after {
+  content: "";
+  position: absolute;
+  width: calc(50% + 20px);
+  height: 20px;
+  left: -20px;
+  top: -20px;
+  border-top: 1px solid #837e7e;
+  border-right: 1px solid #837e7e;
+  /* border-top-right-radius: 5px; */
+}
+
+.parent_container::before {
+  content: "";
+  position: absolute;
+  width: calc(50% + 20px);
+  height: 20px;
+  right: -20px;
+  top: -20px;
+  border-top: 1px solid #837e7e;
+  border-left: 1px solid #837e7e;
+  /* border-top-left-radius: 5px; */
+
+}
+
+
+.children_container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.administration_con .children_container .parent_container:last-child::before,
+.administration_con .children_container .parent_container:first-child::after {
+  border: 0px none;
+}
+
+.administration_con .children_container .parent_container:last-child::after {
+  border-top-right-radius: 5px;
+}
+
+.administration_con .children_container .parent_container:first-child::before {
+  border-top-left-radius: 5px;
+}
+
+.employee_card_con {}
+
+.employee_card {
+  width: 300px;
+  height: 230px;
+  border: 0.5px solid grey;
+  margin-bottom: 50px;
+  /* margin-right: 10px; */
+  position: relative;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  gap: 20px;
+  box-shadow: 0px 0px 5px #000000;
+}
+
+
+.employee_card::after {
+  bottom: -30px !important;
+  height: 30px;
+  position: absolute;
+  content: "";
+  border: 0.5px solid #837e7e;
+  left: 50%;
+}
+
+.one_children>.employee_card::after {
+  height: 50px;
+  bottom: -50px !important;
+}
+
+.no_children .employee_card::after {
+  display: none;
+}
+
+
+
+.employee_card>.before_ele {
+  position: absolute;
+  height: 5px;
+  top: 0;
+  left: 0;
+  background-color: #9747FF;
+  width: calc(100% - 5px);
+  border-radius: 10px;
+  transform: translate(2.5px);
+}
+
+.expand{
+  position: absolute;
+  top: -17px;
+  fill: #837e7e;
+}
+
+.employee_card_top_con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.edit_svg {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  fill: #837e7e;
+}
+
+.employee_card_top_con ::before {
+  display: none;
+}
+
+.person_svg {
+  fill: rgba(151, 71, 255, 0.3);
+  height: 70px;
+  width: 70px;
+}
+
+.employee_name {
+  color: black;
+}
+
+.role {
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.role>span {
+  background-color: rgba(151, 71, 255, 0.3);
+  padding: 5px 10px;
+  width: 70px;
+  display: inline-block;
+  text-align: center;
 }

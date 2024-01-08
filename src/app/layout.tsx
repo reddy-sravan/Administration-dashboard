@@ -16,6 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head><title>Administration-hierarchy</title>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
