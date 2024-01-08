@@ -130,10 +130,11 @@ body {
   transform: translate(2.5px);
 }
 
-.expand{
+.expand svg{
   position: absolute;
   top: -17px;
   fill: #837e7e;
+  left: calc(50% - 12px);
 }
 
 .employee_card_top_con {
@@ -143,7 +144,7 @@ body {
   width: 100%;
 }
 
-.edit_svg {
+.edit_svg >svg{
   position: absolute;
   right: 0px;
   top: 10px;
@@ -154,7 +155,7 @@ body {
   display: none;
 }
 
-.person_svg {
+.person_svg >svg{
   fill: rgba(151, 71, 255, 0.3);
   height: 70px;
   width: 70px;

@@ -10,13 +10,19 @@ const Card = ({ data }: { data: employee }) => {
         <div className={`parent_container ${[...data.children].length === 0 ? 'no_children' : ''}`}>
             <div className={`employee_card_con  ${[...data.children].length === 1 ? 'one_children' : ''}`}>
                 <div className="employee_card">
-                    <ExpandMoreOutlinedIcon className="expand" />
+                    <span className="expand" >
+                        <ExpandMoreOutlinedIcon />
+                    </span>
+                    
                     <div className="before_ele"></div>
                     <div className="employee_card_top_con">
-                        <button onClick={() => alert("This feature is under construction")}>
-                            <ModeEditOutlineOutlinedIcon className="edit_svg" />
+                        <button onClick={() => alert("This feature is under construction")} className="edit_svg">
+                            <ModeEditOutlineOutlinedIcon  />
                         </button>
-                        <AccountCircleSharpIcon className="person_svg" />
+                        <span className="person_svg" >
+                            <AccountCircleSharpIcon />
+                        </span>
+                        
                         <p className="employee_name">{data.name}</p>
                     </div>
                     <div>
